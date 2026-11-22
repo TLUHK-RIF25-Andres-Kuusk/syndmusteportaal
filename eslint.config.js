@@ -30,6 +30,10 @@ export default defineConfig([
           allowConstantExport: true,
           allowExportNames: [
             'loader',
+            'clientLoader',
+            'clientAction',
+            'HydrateFallback',
+            'shouldRevalidate',
             'ErrorBoundary',
             'Layout',
           ],

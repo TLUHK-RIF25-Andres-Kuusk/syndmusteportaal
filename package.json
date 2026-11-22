@@ -13,7 +13,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "react-router typegen && tsc -b",
-    "worker:dev": "wrangler dev"
+    "worker:dev": "wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.105.0",
