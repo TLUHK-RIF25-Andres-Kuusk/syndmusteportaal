@@ -1,0 +1,233 @@
+:root {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+}
+
+/* TEEMAD */
+
+.theme-light {
+  --bg: #f3e7cf;
+  --fg: #2d2118;
+  --border: #7a2f2f;
+  --card: #fff7e8;
+  --accent: #8b2f2f;
+  --accent2: #c69b3c;
+}
+
+.theme-dark {
+  --bg: #171310;
+  --fg: #f2e5cf;
+  --border: #b16a4a;
+  --card: #28201a;
+  --accent: #d67b5b;
+  --accent2: #c7a052;
+}
+
+/* LEHT */
+
+.app {
+  min-height: 100vh;
+  padding: 2rem;
+
+  background: var(--bg);
+  color: var(--fg);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* PÄIS */
+
+.page-header {
+  margin-bottom: 2rem;
+  border-bottom: 3px double var(--accent);
+  padding-bottom: 1rem;
+}
+
+.page-header h1 {
+  margin: 0 0 0.25rem;
+
+  color: var(--accent);
+  font-size: 42px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.page-header p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* SÜNDMUSED */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.event-card {
+  padding: 20px;
+
+  background: var(--card);
+  color: var(--fg);
+
+  border: 2px solid var(--border);
+  border-radius: 2px;
+
+  box-shadow: 5px 5px 0 var(--accent2);
+}
+
+.event-card h3 {
+  margin: 0.25rem 0 0.5rem;
+
+  color: var(--accent);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.event-card time {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.location {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* TAGID */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  margin-top: 1rem;
+}
+
+.tag {
+  padding: 0.2rem 0.5rem;
+
+  border: 1px solid var(--accent);
+  color: var(--accent);
+
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* TEEMA NUPP */
+
+.theme-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+
+  background: var(--accent);
+  color: #fff7e8;
+
+  border: 2px solid var(--accent);
+  font-family: inherit;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.theme-button:hover {
+  background: var(--accent2);
+  border-color: var(--accent2);
+  color: #2d2118;
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: auto;
+  padding-top: 3rem;
+
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  opacity: 0.7;
+}
+
+
+.footer-light {
+  opacity: 0.8;
+}
+
+.footer-dark {
+  opacity: 0.9;
+}
+
+.is-past {
+  opacity: 0.6;
+  filter: grayscale(0.4);
+}
+
+.past-label {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border: 2px solid currentColor;
+  box-shadow: 2px 2px 0 currentColor;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+/*  PILDID */
+
+.event-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+}
+
+
+/* NAVIGEERIMINE */
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.main-nav a {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.main-nav a.active {
+  border-bottom: 2px solid var(--accent);
+}
+
+
+.event-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.event-card h3 a:hover {
+  text-decoration: underline;
+}
